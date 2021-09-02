@@ -1,0 +1,23 @@
+nVersion:
+Signed integer that tells what block validation rules to follow. 
+There are 4 versions that each introduced soft forking changes.
+
+hashPrevBlock:
+A SHA256 hash of the previous block header. A previous block 
+can't be changed without also changing the current block's header.
+
+hashMerkleRoot:
+A SHA256 hash formed from transaction IDs of all block transactions
+to ensure no changes can be made to those transactions without
+changing the block.
+
+nTime:
+The Unix epoch time when the miner started hashing the header
+
+nBits:
+Stores a compact version of the target threshold that the header 
+hash is compared against to determine validity of a block. 
+
+nNonce:
+Only value that miners can change to attempt to find a hash
+that is less than or equal to the target. (By brute force)
